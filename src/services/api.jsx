@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://knowledgebase-platform-backend-4.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL,
   withCredentials: true, // Only needed if you're using cookies
 });
 
