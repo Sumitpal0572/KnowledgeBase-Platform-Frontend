@@ -1,8 +1,33 @@
-# React + Vite
+# 🧠 KnowledgeBase Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of the **KnowledgeBase Platform**, built using **React**, **Vite**, **Tailwind CSS**, and **Axios**. It interacts with a secure backend to allow users to register, log in, and create/manage documents.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+
+> 🔗 [Live App](https://knowledge-base-platform-frontend.vercel.app/) 
+
+---
+
+## 🧰 Tech Stack
+
+- ⚛️ React (with Hooks)
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🔐 JWT Auth (via Axios)
+- 🌐 Axios for API requests
+- 📦 Deployed on Netlify / Vercel
+
+---
+
+💡 Features
+✅ User Registration and Login
+
+✅ Token-based Auth (JWT)
+
+✅ Document Creation and Management
+
+✅ Secure API Calls with Axios
+
+✅ Protected Routes using Auth Context
