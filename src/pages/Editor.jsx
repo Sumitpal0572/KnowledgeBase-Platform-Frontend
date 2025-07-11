@@ -5,17 +5,26 @@ import api from "../services/api";
 const Editor = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await api.post("/documents", { title, content });
-    navigate("/dashboard");
+    try {
+      const res = await api.post("/documents", { title, content }); // ✅ updated path
+      navigate(`/document/${res.data._id}`); // redirect to document view after creation
+    } catch (err) {
+      console.error("Document creation failed", err);
+      setError("Failed to save document. Please try again.");
+    }
   };
 
   return (
-    <div className="p-8">
+    <div className="max-w-4xl mx-auto p-8">
+      <h1 className="text-2xl font-bold mb-6">Create a New Document</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {error && <p className="text-red-500">{error}</p>}
+
         <input
           type="text"
           placeholder="Document Title"
